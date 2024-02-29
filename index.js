@@ -1,5 +1,6 @@
 const logoName = document.getElementById('logo_name');
 const progressTime = document.getElementById('progress_time');
+const headLogo = document.getElementById('head_logo');
 
 //anim logo_name
 setTimeout( () => {
@@ -9,8 +10,9 @@ setTimeout( () => {
 //start progress
 setTimeout( () => {
     progressTime.classList.remove('hidden');
+    headLogo.classList.remove('hidden');
     let intervalId = setInterval(() => {
-        progressTime.textContent = +progressTime.textContent + 14;
+        progressTime.textContent = +progressTime.textContent + 9;
         if(+progressTime.textContent >= 100) {
             progressTime.textContent = 100;
             clearInterval(intervalId);
